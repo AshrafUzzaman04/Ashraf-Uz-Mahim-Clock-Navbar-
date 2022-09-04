@@ -55,6 +55,7 @@ setInterval(() => {
   const d = new Date();
   manageHour(d.getHours());
   showDate(d);
+  hellow(d);
   time.textContent =
     ("0" + hour).slice(-2) +
     ":" +
@@ -81,14 +82,15 @@ const showDate = (d) => {
 
 // week management
 
-const d = new Date();
-const weekArray = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-week.textContent = Monday[d.getDate()];
+const hellow = (w) => {
+  const weekArray = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  week.textContent = weekArray[w.getDay()];
+};
